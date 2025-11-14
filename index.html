@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laboratorio: JavaScript y AJAX</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+   <h1>Laboratorio — Tecnologías JavaScript y AJAX</h1>
+   <p class="subtitle">Asignatura: Desarrollo de Aplicaciones en Red</p>
+  </header>
+
+  <main>
+    <section id="js-ejercicios" class="card">
+      <!-- Palíndromo -->
+      <article class="task" id="palindromo">
+        <div class="row">
+          <input id="pal-input" type="text" placeholder="Escribe una palabra o frase" />
+          <button id="pal-check">Comprobar</button>
+        </div>
+        <p id="pal-result" class="result"></p>
+      </article>
+
+      <!-- Mayor de dos números -->
+      <article class="task" id="mayor">
+        <div class="row">
+          <input id="num-a" type="number" placeholder="Número A" />
+          <input id="num-b" type="number" placeholder="Número B" />
+          <button id="num-check">Comparar</button>
+        </div>
+        <p id="num-result" class="result"></p>
+      </article>
+
+      <!-- Vocales presentes -->
+      <article class="task" id="vocales">
+        <div class="row">
+          <input id="voc-frase" type="text" placeholder="Escribe una frase" />
+          <button id="voc-check">Listar vocales</button>
+        </div>
+        <p id="voc-result" class="result"></p>
+      </article>
+
+      <!-- Conteo de vocales -->
+      <article class="task" id="conteo-vocales">
+        <div class="row">
+          <input id="cont-frase" type="text" placeholder="Escribe una frase" />
+          <button id="cont-check">Contar</button>
+        </div>
+        <pre id="cont-result" class="result code"></pre>
+      </article>
+    </section>
+
+    <section id="ajax" class="card">
+      <div class="row">
+        <input id="url-input" type="url" placeholder="URL a solicitar" />
+        <button id="btn-cargar">Mostrar contenidos</button>
+      </div>
+
+      <div class="grid">
+        <div>
+          <h3>Estados de la petición</h3>
+          <ul id="estado-lista" class="estado"></ul>
+        </div>
+        <div>
+          <h3>Código de estado</h3>
+          <p id="status" class="badge">—</p>
+        </div>
+      </div>
+
+      <details open>
+        <summary><strong>Cabeceras HTTP de la respuesta</strong></summary>
+        <pre id="headers" class="code"></pre>
+      </details>
+
+      <details open>
+        <summary><strong>Contenidos</strong></summary>
+        <iframe id="contenido-frame" title="Contenido cargado" sandbox></iframe>
+        <pre id="contenido-pre" class="code hidden"></pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
